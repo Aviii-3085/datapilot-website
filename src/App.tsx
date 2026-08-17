@@ -42,8 +42,11 @@ function CopyButton({ value, label = 'Copy' }: { value: string; label?: string }
 
 function Logo() {
   return (
-    <span className="brand-mark" aria-hidden="true">
-      <BarChart3 />
+    <span className="brand-mark">
+      <img
+        src="/brand/datapilot-website-icon-color.png"
+        alt="Datapilot"
+      />
     </span>
   );
 }
@@ -60,7 +63,7 @@ function Header() {
       </div>
       <header className="navbar">
         <div className="container-wide" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-          <a className="brand" href="#top" onClick={closeMenu} data-testid="link-brand"><Logo /> datapilot</a>
+          <a className="brand" href="#top" onClick={closeMenu} data-testid="link-brand"><Logo /> Datapilot</a>
           <nav className="nav-links" aria-label="Main navigation">
             <a href="#workflow" data-testid="link-nav-workflow">How it works</a>
             <a href="#features" data-testid="link-nav-features">Features</a>
@@ -225,7 +228,7 @@ function ReportPreview() {
         </div>
         <div className="report-window" data-testid="display-report-preview">
           <div className="report-bar">
-             <div className="report-brand"><Logo /> <span>datapilot <b>/</b> example_report</span></div>
+             <div className="report-brand"><Logo /> <span>Datapilot <b>/</b> example_report</span></div>
             <div className="report-tabs"><span className="report-tab-active">Overview</span><span>Columns</span><span>Signals</span></div>
           </div>
           <div className="report-content">
@@ -322,7 +325,9 @@ function Footer() {
     <footer className="footer">
       <div className="container-wide">
         <div className="footer-top">
-          <div><a className="brand" href="#top" data-testid="link-footer-brand"><Logo /> datapilot</a><p className="footer-note">Understand first. Build with evidence.</p></div>
+          <div>
+            <a className="brand" href="#top" data-testid="link-footer-brand"><Logo /> Datapilot</a>
+          </div>
           <div className="footer-links">
             <a href={githubUrl} target="_blank" rel="noreferrer" data-testid="link-footer-github">GitHub</a>
             <a href={pypiUrl} target="_blank" rel="noreferrer" data-testid="link-footer-pypi">PyPI</a>

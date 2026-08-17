@@ -126,13 +126,13 @@
 .section-heading h2 { font-size: clamp(32px, 4vw, 53px); line-height: 1.04; letter-spacing: -.045em; margin: 14px 0 18px; font-weight: 600; }
 .section-heading p { color: hsl(var(--muted-foreground)); font-size: 17px; line-height: 1.65; max-width: 600px; }
 
-.top-strip { height: 32px; background: hsl(var(--foreground)); color: hsl(var(--background)); display: flex; align-items: center; justify-content: center; font: 400 11px var(--app-font-mono); letter-spacing: .015em; }
-.top-strip a { color: hsl(var(--accent)); text-decoration: none; margin-left: 8px; }
+.top-strip { height: 32px; background: hsl(var(--foreground)); color: hsl(var(--background)); display: flex; align-items: center; justify-content: center; gap: 8px; font: 400 11px var(--app-font-mono); letter-spacing: .015em; }
+.top-strip a { color: hsl(var(--accent)); text-decoration: none; margin-left: 8px; white-space: nowrap; display: inline-flex; align-items: center; gap: 2px; flex-shrink: 0; }
 .top-strip a:hover { text-decoration: underline; }
 .navbar { height: 74px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid hsl(var(--border) / .72); position: relative; z-index: 20; background: hsl(var(--background) / .84); backdrop-filter: blur(16px); }
 .brand { display: flex; gap: 10px; align-items: center; text-decoration: none; color: hsl(var(--foreground)); font-weight: 600; letter-spacing: -.04em; font-size: 18px; }
-.brand-mark { width: 28px; height: 28px; display: grid; place-items: center; border-radius: 7px; background: hsl(var(--primary)); color: hsl(var(--primary-foreground)); }
-.brand-mark svg { width: 17px; height: 17px; }
+.brand-mark { width: 28px; height: 28px; display: grid; place-items: center; border-radius: 7px; overflow: hidden; flex: 0 0 28px; }
+.brand-mark img { width: 28px; height: 28px; display: block; object-fit: cover; }
 .nav-links { display: flex; gap: 28px; align-items: center; margin-left: auto; margin-right: 30px; }
 .nav-links a, .mobile-nav a { font-size: 13px; color: hsl(var(--muted-foreground)); text-decoration: none; transition: color .2s ease; }
 .nav-links a:hover, .mobile-nav a:hover { color: hsl(var(--foreground)); }
